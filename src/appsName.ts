@@ -15,7 +15,7 @@ export const appsName = [
 export const socialMediaWebsites = [
   { id: '101', name: 'Facebook', icon: 'logo-facebook', url: 'facebook.com' },
   { id: '102', name: 'Instagram', icon: 'logo-instagram', url: 'instagram.com' },
-  { id: '103', name: 'Twitter', icon: 'logo-twitter', url: 'twitter.com' },
+  { id: '103', name: 'Twitter', icon: 'logo-twitter', url: 'x.com' },
   { id: '104', name: 'LinkedIn', icon: 'logo-linkedin', url: 'linkedin.com' },
   { id: '105', name: 'TikTok', icon: 'logo-tiktok', url: 'tiktok.com' },
   { id: '106', name: 'WhatsApp', icon: 'logo-whatsapp', url: 'whatsapp.com' },

@@ -1501,6 +1501,8 @@ PODS:
     - React-utils (= 0.75.4)
   - RNCMaskedView (0.1.11):
     - React
+  - RNDeviceInfo (14.0.0):
+    - React-Core
   - RNExitApp (2.0.0):
     - React-Core
   - RNGestureHandler (2.20.1):
@@ -1723,6 +1725,7 @@ DEPENDENCIES:
   - ReactCodegen (from `build/generated/ios`)
   - ReactCommon/turbomodule/core (from `../node_modules/react-native/ReactCommon`)
   - "RNCMaskedView (from `../node_modules/@react-native-community/masked-view`)"
+  - RNDeviceInfo (from `../node_modules/react-native-device-info`)
   - RNExitApp (from `../node_modules/react-native-exit-app`)
   - RNGestureHandler (from `../node_modules/react-native-gesture-handler`)
   - RNReanimated (from `../node_modules/react-native-reanimated`)
@@ -1862,6 +1865,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon"
   RNCMaskedView:
     :path: "../node_modules/@react-native-community/masked-view"
+  RNDeviceInfo:
+    :path: "../node_modules/react-native-device-info"
   RNExitApp:
     :path: "../node_modules/react-native-exit-app"
   RNGestureHandler:
@@ -1939,6 +1944,7 @@ SPEC CHECKSUMS:
   ReactCodegen: 4bcb34e6b5ebf6eef5cee34f55aa39991ea1c1f1
   ReactCommon: 6a952e50c2a4b694731d7682aaa6c79bc156e4ad
   RNCMaskedView: 0e1bc4bfa8365eba5fbbb71e07fbdc0555249489
+  RNDeviceInfo: 6192a9c9167e256803e554038b22b3b2b40163dc
   RNExitApp: 00036cabe7bacbb413d276d5520bf74ba39afa6a
   RNGestureHandler: 1b7c5ed637e02f6898d08bffb701d378be5e091d
   RNReanimated: f42a5044d121d68e91680caacb0293f4274228eb

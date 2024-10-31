@@ -59,14 +59,14 @@ const BlockScreen = (props:any) => {
         <Text style={styles.modalTextSmall2}>Unlock</Text>
       </TouchableOpacity>
       { unlock && unlockView()}
-      <TouchableOpacity
+      {/* <TouchableOpacity
       activeOpacity={0.5}
         style={styles.buttonClose}
         onPress={() => closeApp()}
       >
 
         <Text style={styles.textStyle}>Close</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
     </View>
   </Modal>
 

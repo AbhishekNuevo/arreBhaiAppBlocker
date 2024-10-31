@@ -6159,6 +6159,11 @@ react-is@^16.8.4:
 react-is@^17.0.1:
   version "17.0.2"
 
+react-native-device-info@^14.0.0:
+  version "14.0.0"
+  resolved "https://registry.npmjs.org/react-native-device-info/-/react-native-device-info-14.0.0.tgz"
+  integrity sha512-hKgH5URRQyMvr1wcBF8pZ9EnSM6fLGAfYRGZaOM8ljkr841kV5bjteI/p9ORfulxgZjB/vfz2J8zMAYwPOQWJg==
+
 react-native-exit-app@^2.0.0:
   version "2.0.0"
   resolved "https://registry.npmjs.org/react-native-exit-app/-/react-native-exit-app-2.0.0.tgz"
