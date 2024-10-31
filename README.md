@@ -2,6 +2,9 @@
 
 ArreBhai is a React Native application designed to help users manage to block screen for selected apps and websites. e.g Youtube, Instagram, Facebook, etc.
 
+# To download APK 
+https://drive.google.com/file/d/1l_BdMlxJHgCr1IrX5xkgcWcH9vs4uten/view?usp=sharing
+
 ## Features WIP (Work in Progress)
 
 - Customizable unlock times
