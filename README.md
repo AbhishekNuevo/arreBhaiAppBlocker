@@ -1,6 +1,15 @@
 # ArreBhai
+I created this app to help block social media applications that often lead to excessive use. I've noticed that we tend to use certain apps and then end up spending much more time than we intended, only to feel regret afterward. This is especially true with short-form content. This app 'ArreBhai' ("Arre Bhai" is an informal Hindi phrase that expresses exasperation or anguish.) can block the apps and websites which you select to block. But my biggest pain is still not solved which allowing YouTube long-form content but blocking short-form content. 
+I know there are many apps that provide services to block applications but those are paid or annoying ads. My main intention was to block the short-form content which is still not solved but if you use YouTube in browser it can block.(But not working 100% as sometimes URL in search bar is not visible while scrolling short videos). 
 
-ArreBhai is a React Native application designed to help users manage to block screen for selected apps and websites. e.g Youtube, Instagram, Facebook, etc.
+I want to keep this open source and free. 
+
+Why I created in React Native?-  Yes I know this can be created in Android native only but just for some learning I tried in RN. 
+
+# Pending Tasks
+1. Feature for custom app and websites to block.
+2. Block short-form contents (I tried but didn't find a solution yet)
+3. create similar app for IOS
 
 # To download APK 
 https://drive.google.com/file/d/1l_BdMlxJHgCr1IrX5xkgcWcH9vs4uten/view?usp=sharing
