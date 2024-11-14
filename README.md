@@ -17,6 +17,10 @@ Why I created in React Native?-  Yes I know this can be created in Android nativ
 # To download APK 
 https://drive.google.com/file/d/1l_BdMlxJHgCr1IrX5xkgcWcH9vs4uten/view?usp=sharing
 
+# Watch This after downloading the APK for permission
+https://drive.google.com/file/d/1YwtU_6fpJtPkvVrbHhSK-r_20uxuorMS/view?usp=sharing
+
+
 ## Features WIP (Work in Progress)
 
 - Customizable unlock times
