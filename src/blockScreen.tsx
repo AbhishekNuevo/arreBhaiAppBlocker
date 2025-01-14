@@ -2,11 +2,12 @@
  * @fileoverview Block screen component
  * @module BlockScreen
  */
-import RNExitApp from 'react-native-exit-app';
-import React, { useState } from 'react';
-import { View, Text, Modal, TouchableOpacity, StyleSheet,NativeModules} from 'react-native';
+import React, { useCallback, useEffect, useState } from 'react';
+import { View, Text, Modal, TouchableOpacity, StyleSheet,NativeModules, KeyboardAvoidingView, Platform} from 'react-native';
 import { AppContent } from './content';
-
+import CalculationView from './calculationView';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useFocusEffect } from '@react-navigation/native';
 
 const unlockTimeArray = [10, 30, 60, 120, 300];
 
@@ -14,11 +15,29 @@ const BlockScreen = (props:any) => {
   const { SharedPreferencesModule } = NativeModules;
     const {eventMessage, setEventMessage} = props || {};
     const [unlock, setUnlock] = useState(false);
+    const [blocerView, setblocerView] = useState('1');
 
     const closeApp = () => {
         setEventMessage('');
         // RNExitApp.exitApp();
     };
+
+    const getData = async () => {
+      try {
+        const value = await AsyncStorage.getItem('blocerView');
+        if (!value) {
+          setblocerView('1');
+        }else{
+          setblocerView(value);
+        }
+
+      } catch (e) {
+        console.error('Failed to fetch data', e);
+      }
+    };
+    useEffect(()=>{
+      getData();
+    },[unlock]);
 
     const unlockView = () => {
       return  (<View style={styles.unlockContainer} >
@@ -38,6 +57,7 @@ const BlockScreen = (props:any) => {
     const setUnlockTime = (item:any) => {
       const timeStamp = Date.now() + item * 1000;
       SharedPreferencesModule?.setValue('unlockTime', timeStamp?.toString());
+
       setUnlock(false);
     };
 
@@ -50,7 +70,7 @@ const BlockScreen = (props:any) => {
       setEventMessage('');
     }}
   >
-    <View style={styles.modalView}>
+    <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : 'height'}  style={styles.modalView}>
       <View style={styles.modalTextContainer}>
         <Text style={styles.modalText}>{AppContent?.hindi?.messageScold}</Text>
         <Text style={styles.modalTextSmall}>{AppContent?.hindi?.messageAdvice}</Text>
@@ -58,7 +78,9 @@ const BlockScreen = (props:any) => {
       <TouchableOpacity activeOpacity={0.5} style={styles.unlockViewBtn} onPress={() => unlockViewHandler() }>
         <Text style={styles.modalTextSmall2}>Unlock</Text>
       </TouchableOpacity>
-      { unlock && unlockView()}
+      { unlock && blocerView === '1' && <CalculationView setUnlockTime={setUnlockTime}/>}
+      { unlock && blocerView === '2' && unlockView()}
+
       {/* <TouchableOpacity
       activeOpacity={0.5}
         style={styles.buttonClose}
@@ -67,7 +89,7 @@ const BlockScreen = (props:any) => {
 
         <Text style={styles.textStyle}>Close</Text>
       </TouchableOpacity> */}
-    </View>
+    </KeyboardAvoidingView>
   </Modal>
 
   );
