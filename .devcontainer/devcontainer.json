@@ -13,7 +13,7 @@
         // Feature to install Android SDK and command-line tools.
         // This feature typically sets ANDROID_HOME for you.
         "ghcr.io/devcontainers/features/android-sdk:1": {
-            "version": "34", // Or a specific version like "33", "34"
+            "version": "33", // Or a specific version like "33", "34"
             "buildTools": "33.0.0", // Or a specific version like "33.0.0"
             "systemImage": "system-images;android-33;google_apis;x86_64", // Example for emulator
             "installEmulator": true // Set to true if you want emulator support
