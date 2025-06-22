@@ -1,0 +1,46 @@
+{
+    "name": "React Native Android Development",
+    // You can choose a base image that already has Node.js (and potentially Java)
+    // The 'universal' image is a good starting point as it includes many common tools.
+    "image": "mcr.microsoft.com/devcontainers/universal:latest",
+
+    "features": {
+        // Feature to install Java (JDK). Gradle requires Java.
+        // You might need a specific version depending on your React Native project.
+        "ghcr.io/devcontainers/features/java:1": {
+            "version": "17" // Or "latest", "11", "21" etc.
+        },
+        // Feature to install Android SDK and command-line tools.
+        // This feature typically sets ANDROID_HOME for you.
+        "ghcr.io/devcontainers/features/android-sdk:1": {
+            "version": "34", // Or a specific version like "33", "34"
+            "buildTools": "33.0.0", // Or a specific version like "33.0.0"
+            "systemImage": "system-images;android-33;google_apis;x86_64", // Example for emulator
+            "installEmulator": true // Set to true if you want emulator support
+        },
+        // Feature to install Node.js (assuming you need a specific version)
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "lts" // Or "18", "20", "latest" etc.
+        }
+    },
+
+    // Optional: Add some post-create commands to install npm dependencies
+    // This runs once when the codespace is first created.
+    "postCreateCommand": "npm install && cd android && npm install && cd ..",
+
+    // Optional: Forward ports for React Native packager and potential web preview
+    "forwardPorts": [8081, 19000, 19001],
+
+    // Optional: Recommended VS Code extensions for React Native development
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "esbenp.prettier-vscode",
+                "dbaeumer.vscode-eslint",
+                "msjsdiag.vscode-react-native", // Official React Native extension
+                "streetsidesoftware.code-spell-checker",
+                "eamodio.gitlens"
+            ]
+        }
+    }
+}
